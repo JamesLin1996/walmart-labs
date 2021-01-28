@@ -4,6 +4,9 @@ import PageHeader from "./PageHeader";
 import BugReportIcon from '@material-ui/icons/BugReport';
 import {Paper, makeStyles, createMuiTheme, MuiThemeProvider} from '@material-ui/core';
 import MaterialTable from 'material-table'
+import { Router, Route } from "react-router-dom";
+import MoreDetails from './MoreDetails';
+
 
 const useStyles = makeStyles(theme => ({
     pageContent: {
@@ -108,6 +111,11 @@ export default function Table() {
                                                        <b>Author Association: </b>{item['author_association']} | <b>Assignee: </b>{item['assignees']}
                                                        <br/>
                                                        <b>Body: </b>{item['body']}
+                                                       <br/>
+                                                       <a href={'/' + rowData.number}>More Details</a>
+                                                       {/*<Router>*/}
+                                                       {/*    <Route path='/:number' component={MoreDetails}>Show More</Route>*/}
+                                                       {/*</Router>*/}
                                                    </div>
                                                )
                                            }
