@@ -99,7 +99,7 @@ export default function Table() {
 
                                                return (
                                                    <div>
-                                                       <img src={item.user['avatar_url']} style={{height: 50, width: 50}} />
+                                                       <img src={item.user['avatar_url']} style={{height: 75, width: 75}} />
                                                        <br/>
                                                        <b>User: </b>{item.user['login']}
                                                        <br/>
@@ -113,6 +113,7 @@ export default function Table() {
                                            }
                                        }
                                    ]}
+                                   onRowClick={(event, rowData, togglePanel) => togglePanel()}
                     />
                 </MuiThemeProvider>
             </Paper>
